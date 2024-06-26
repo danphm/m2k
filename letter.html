@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="img/mymelodyicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="timer.js" defer></script>
+    <title>Letter For You</title>
+    <link rel="stylesheet" href="css/letter.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1><a href="index.html">Dear Marie,</a></h1>
+    </div>
+    <div class="buttons">
+        <!-- Back to Homepage button -->
+        <button class="back-button" onclick="location.href='letterpage.html'">
+            <i class="material-icons">arrow_back</i>
+        </button>
+    
+        <!-- Play and Pause buttons -->
+        <button id="play-btn">
+            <i class="material-icons">play_arrow</i>
+        </button>
+        <button id="pause-btn">
+            <i class="material-icons">pause</i>
+        </button>
+    </div>
+    <div class="paper">
+        <div class="content">
+            <p>I've been thinking a lot lately about how fortunate I am to have you in my life, especially over the past 7 months or so. Your humor is genuinely something I love hearing throughout my days in ways I never expected, making even the most mundane moments feel special and fun. I appreciate every little moment with you and all the small things you do for me never goes unnoticed. I will forever remember how you took care of me at Vinh's birthday party, driving me home and ensuring I was okay. It meant the world to me, and it's just one of the many reasons why I love you so so much. The anniversary gifts you gave me were beyond thoughtful. They weren't just presents; they were perfect gifts that I don't think I could ever top. I can't lie, making me cry in front of you was something that I didn't know could happen since I've gone most of my life keeping a lot of my emotions and tears bottled up for so long. Being able to cry around you brought me a sense of peace and that's how I would describe the feelings I experience when I'm with you. Knowing that I have someone as caring and loving as you by my side is something that I won't ever take for granted and you mean so much more to me than you would probably think.Whenever I see MyMelodyGyatt and Nigga, it just reminds me of our jokes we share together. It's these little things that make our relationship uniquely ours, and I cherish every moment of it. You've already made such a positive impact on my life in such a short time. You've shown me what it means to truly care for someone and to invest in a relationship with all your heart. You've made me want to be a better person, not just for myself but for us, because what we have is worth every effort. I've never loved someone as much as you and I don't think I would be able to see myself with anyone else in my life. Everything about you reminds me constantly of how lucky I am, and I will forever emphasise how beautiful you are both on the inside and outside. Marie, I didn't know I could feel this way about someone so quickly, but with you, it just feels right. Thank you for being you and for being a part of my life. I look forward to all the adventures and memories we'll create together, and I can't wait to see the future ahead. Baby, I hope you love this small gift I've spent some time making for you, even though I know you love your handwritten cards and I tried my best to include a lot of small details which you might notice HAHAHA. I'll be keeping this website up forever, so feel free to look back whenever you feel like you want to or when you miss me. I also fixed the valentines day website so everything should work indefinitely. With all my love, Dan.
+            </p>
+        </div>
+        <img src="img/melody.JPEG" alt="Melody" style="max-width: 30%; margin-top: 20px;">
+    </div>
+    <footer id="timer-container">
+        We have been together for: <span id="timer"></span>
+    </footer>
+    <audio id="background-audio" src="img/Heart To Heart.mp3" preload="auto" loop
+        volume="0.5"></audio>
+    <script>
+        document.getElementById('play-btn').addEventListener('click', function () {
+            var audio = document.getElementById('background-audio');
+            audio.play().catch(function (error) {
+                console.log('Autoplay was prevented: ', error);
+            });
+        });
+
+        document.getElementById('pause-btn').addEventListener('click', function () {
+            var audio = document.getElementById('background-audio');
+            audio.pause();
+        });
+
+        // Attempt to play the audio when the page loads (autoplay may be prevented by browser)
+        window.addEventListener('load', function () {
+            var audio = document.getElementById('background-audio');
+            audio.play().catch(function (error) {
+                console.log('Autoplay was prevented: ', error);
+            });
+        });
+    </script>
+</body>
+
+</html>

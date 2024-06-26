@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="img/mymelodyicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="timer.js" defer></script>
+    <title>Clarity Live</title>
+    <link rel="stylesheet" href="css/letter.css">
+    <style>
+        /* Center the video */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            /* Adjust as needed */
+        }
+
+        .video-container video {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <h1><a href="index.html">Clarity live with my baby!</a></h1>
+    </div>
+    <div class="buttons">
+        <!-- Back to Homepage button -->
+        <button class="back-button" onclick="location.href='letterpage.html'">
+            <i class="material-icons">arrow_back</i>
+        </button>
+    </div>
+
+    <!-- Video container -->
+    <div class="video-container">
+        <video controls>
+            <source src="img/Clarity.MOV" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <footer id="timer-container">
+        We have been together for: <span id="timer"></span>
+    </footer>
+</body>
+
+</html>

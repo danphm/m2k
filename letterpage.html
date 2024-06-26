@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Letter For You</title>
+  <link rel="stylesheet" href="css/letterpage.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="img/mymelodyicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="timer.js" defer></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <h1><a href="index.html">Click On The Letter!</a></h1>
+  </div>
+  <div class="buttons">
+    <!-- Back to Homepage button -->
+    <button class="back-button" onclick="location.href='index.html'">
+      <i class="material-icons">arrow_back</i>
+    </button>
+
+    <!-- Play and Pause buttons -->
+    <button id="play-btn">
+      <i class="material-icons">play_arrow</i>
+    </button>
+    <button id="pause-btn">
+      <i class="material-icons">pause</i>
+    </button>
+  </div>
+  <div id="card">
+    <a href="letter.html">
+      <div class="heart"></div>
+    </a>
+    <a href="letter.html">
+      <div class="heart1"></div>
+    </a>
+    <a href="letter.html">
+      <div class="heart2"></div>
+    </a>
+    <a href="letter.html">
+      <div class="heart3"></div>
+    </a>
+    <a href="letter.html">
+      <div class="heart4"></div>
+    </a>
+  </div>
+  <footer id="timer-container">
+    We have been together for: <span id="timer"></span>
+  </footer>
+  <audio id="background-audio" src="img/Joey Bada$$ - Show Me (Official Audio).mp3" preload="auto" loop
+    volume="0.5"></audio>
+  <script>
+    document.getElementById('play-btn').addEventListener('click', function () {
+      var audio = document.getElementById('background-audio');
+      audio.play().catch(function (error) {
+        console.log('Autoplay was prevented: ', error);
+      });
+    });
+
+    document.getElementById('pause-btn').addEventListener('click', function () {
+      var audio = document.getElementById('background-audio');
+      audio.pause();
+    });
+
+    // Attempt to play the audio when the page loads (autoplay may be prevented by browser)
+    window.addEventListener('load', function () {
+      var audio = document.getElementById('background-audio');
+      audio.play().catch(function (error) {
+        console.log('Autoplay was prevented: ', error);
+      });
+    });
+  </script>
+</body>
+
+</html>
