@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #222a68;
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    color: #333;
+    /* Adjusted text color for better readability */
+}
+
+.buttons {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+button.back-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #e2adf2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 4px solid #654597;
+    transition: all 0.1s ease-in-out;
+}
+
+button.back-button:hover {
+    background-color: #ab81cd;
+    border-bottom-width: 0;
+    border-top-width: 4px;
+}
+
+button.back-button:active {
+    background-color: #ab81cd;
+    box-shadow: 0 2px #654597;
+    transform: translateY(4px);
+}
+
+button#play-btn,
+button#pause-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #e2adf2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 4px solid #654597;
+    transition: all 0.1s ease-in-out;
+}
+
+button#play-btn:hover,
+button#pause-btn:hover {
+    background-color: #ab81cd;
+    border-bottom-width: 0;
+    border-top-width: 4px;
+}
+
+button#play-btn:active,
+button#pause-btn:active {
+    background-color: #ab81cd;
+    box-shadow: 0 2px #654597;
+    transform: translateY(4px);
+}
+
+.material-icons {
+    font-size: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.navbar {
+    overflow: hidden;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navbar a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 60px;
+    /* Adjusted font size for better fit */
+    padding: 14px 20px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a:hover {
+    color: #0f132e;
+}
+
+.paper {
+    width: 60%;
+    font-size: 26px;
+    max-width: 800px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 1px solid #ccc;
+    position: relative;
+    background: linear-gradient(to right, #f5f5f5 0%, #f5f5f5 100%);
+    font-family: 'Rubik', sans-serif;
+    margin: 20px;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Ensure content area fills available space */
+}
+
+.letter-content {
+    width: calc(100% - 20px);
+    /* Adjusted width to account for padding */
+    border: none;
+    outline: none;
+    background: transparent;
+    resize: none;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 10px;
+    box-sizing: border-box;
+    min-height: 100%;
+    /* Ensures content fills available space */
+}
+
+.letter-content::placeholder {
+    color: #aaa;
+}
+
+footer {
+    background-color: #0f132e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

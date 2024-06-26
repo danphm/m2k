@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* Ensures footer sticks to bottom */
+        align-items: center;
+        min-height: 100vh;
+        /* Minimum height of the viewport */
+        background-color: #222A68;
+        font-family: 'Rubik', sans-serif;
+        margin: 0;
+}
+
+.navbar {
+    overflow: hidden;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navbar a {
+    display: inline-block;
+        color: white;
+        text-decoration: none;
+        font-size: 46px;
+        padding: 14px 20px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a:hover {
+    color: #0f132e;
+}
+
+.container {
+    text-align: center;
+    color: white;
+    flex: 1;
+}
+
+.header h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button-container button {
+    font-family: 'Rubik', sans-serif;
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #E2ADF2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    border-top: 0px;
+    border-bottom: 4px solid #654597;
+    transition: all 0.1s ease-in-out;
+}
+
+.button-container button:hover {
+    background-color: #AB81CD;
+    border-bottom-width: 0;
+    border-top-width: 4px;
+}
+
+.button-container button:active {
+    background-color: #AB81CD;
+    box-shadow: 0 2px #654597;
+    transform: translateY(4px);
+}
+
+footer {
+    background-color: #0f132e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
